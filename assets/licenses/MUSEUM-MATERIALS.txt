@@ -1,0 +1,5 @@
+Museum PBR texture maps: CC0 1.0. Source: https://polyhaven.com/license
+https://polyhaven.com/a/wooden_floor_02
+https://polyhaven.com/a/beige_wall_001
+https://polyhaven.com/a/sandstone_blocks_08
+Actual diffuse, OpenGL normal and ARM maps; no website preview renders.

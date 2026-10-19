@@ -1,0 +1,54 @@
+.rotor-panel{position:absolute;inset:0;opacity:0;z-index:0;color:#e9e8e1;pointer-events:auto;overflow:hidden}
+.rotor-heading{position:absolute;top:112px;left:4vw;z-index:3;pointer-events:none}
+.rotor-heading p{font-size:8px;letter-spacing:.19em;color:#b6b6af;margin:0 0 14px}
+.rotor-heading h2{font-size:clamp(24px,3vw,42px);font-weight:500;line-height:1.3;letter-spacing:-.055em;margin:0}
+.rotor-disc{position:absolute;transform:translate(-50%,-50%);isolation:isolate}
+.rotor-wheel{position:absolute;inset:0;will-change:transform}
+.rotor-guide{position:absolute;border:1px solid #ffffff14;border-radius:50%;pointer-events:none}
+.rotor-guide-outer{inset:0}.rotor-guide-inner{inset:30%;border-style:dashed;border-color:#ffffff10}
+.rotor-card{position:absolute;display:block;border-radius:2px;background:#111;box-shadow:0 3px 12px #0008;outline-offset:5px;transition:filter .15s}
+.rotor-card img{width:100%;height:100%;display:block;object-fit:contain;border-radius:2px}
+.rotor-card:hover{filter:brightness(1.15)}.rotor-card:focus-visible{outline:2px solid #e3ddc5;z-index:4}
+.rotor-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none}
+.rotor-core strong{font:500 clamp(20px,3vw,38px)/1 var(--display);letter-spacing:-.06em}
+.rotor-core span{display:block;font-size:5px;letter-spacing:.12em;color:#8d8d87;margin-top:5px}
+.rotor-footer{position:absolute;bottom:32px;left:4vw;right:4vw;display:flex;justify-content:space-between;align-items:end;z-index:4;font-size:11px;line-height:1.8;color:#cecec5}
+.rotor-footer small{font-size:9px;color:#898983}.rotor-footer a{font-size:10px;border-bottom:1px solid #ffffff30;padding:6px 0}
+.linked-gallery .archive-arrival{height:400svh}
+.linked-gallery .archive-content{display:none}
+.archive-wall-anchor{position:absolute;left:0;top:calc((400svh - var(--gallery-viewport)) * .55);width:1px;height:1px;scroll-margin-top:0!important}
+.in-rotor .scroll-header{background:#111e!important;border-color:#ffffff1c!important;color:#eeeee7!important;box-shadow:none!important}
+.in-rotor .scroll-header .menu-panel{background:#111!important;color:#eeeee7!important}
+@media(max-width:650px){.rotor-heading{left:24px;top:105px}.rotor-heading h2{font-size:25px}.rotor-heading p{font-size:7px;margin-bottom:10px}.rotor-footer{left:24px;right:24px;bottom:25px;font-size:10px}.rotor-core strong{font-size:22px}.rotor-core span{font-size:4px}}
+@media(max-height:600px) and (min-width:651px){.rotor-heading{top:99px}.rotor-heading h2{font-size:22px}.rotor-heading p{font-size:6px}.rotor-footer{bottom:18px;font-size:9px}}
+@media(prefers-reduced-motion:reduce){.rotor-panel,.archive-wall-anchor{display:none}.linked-gallery .archive-content,.archive-content{display:block}.archive-arrival{height:auto!important}}
+.no-js .rotor-panel,.no-js .archive-wall-anchor{display:none}.no-js .archive-content{display:block}
+
+@media(prefers-reduced-motion:reduce){.archive-wall-anchor{display:block;position:static;top:auto}.archive-arrival .arrival-sticky{opacity:1!important}}
+.no-js .archive-wall-anchor{display:block;position:static;top:auto}
+
+/* A standing, revolving cylinder. Every photograph remains upright on the wall. */
+.rotor-disc{transform:translateY(-50%);isolation:auto;perspective-origin:50% 50%}
+.rotor-wheel{transform-style:preserve-3d;will-change:transform}
+.rotor-surface{position:absolute;left:50%;top:50%;background:linear-gradient(90deg,#111315,#17191a,#121416);border-top:1px solid #ffffff14;border-bottom:1px solid #ffffff14;backface-visibility:hidden;pointer-events:none}
+.rotor-card{backface-visibility:hidden;box-shadow:0 2px 9px #0009;border:2px solid #202325;transition:none}
+.rotor-card img{border-radius:0;object-fit:contain}
+.rotor-actions{display:flex;gap:12px;align-items:center}
+.rotor-actions button{width:36px;height:36px;border:1px solid #ffffff30;border-radius:50%;color:#e9e8e1;background:#111;font-size:17px;cursor:pointer}
+.rotor-actions button:hover{background:#282828}.rotor-actions a{margin-left:10px}
+@media(max-width:650px){.rotor-actions{gap:8px}.rotor-actions button{width:32px;height:32px}.rotor-actions a{display:none}.rotor-heading h2{font-size:24px}}
+
+/* Warm celluloid, edge perforations, and a soft grazing light. */
+.rotor-panel{background:radial-gradient(ellipse at 50% 45%,#1a130b19,transparent 68%)}
+.rotor-surface{background:linear-gradient(90deg,#18110c,#21180e 48%,#17100b);border-color:#ad874e42;box-shadow:inset 0 2px 7px #e5b96013,inset 0 -3px 9px #000b}
+.rotor-surface::before,.rotor-surface::after{content:'';position:absolute;inset:0;background-image:radial-gradient(ellipse 3px 4px at 7px 7px,#020202 67%,#b59a623b 80%,transparent 96%);background-size:14px var(--film-pitch);pointer-events:none}
+.rotor-surface::after{background-position:0 calc(var(--film-pitch) - 14px)}
+.rotor-card{border:3px solid #20170e;border-radius:1px;box-shadow:0 1px 1px #9a713b55,0 5px 9px #000c,inset 0 1px 2px #e2c48e38}
+.rotor-card::after{content:attr(data-frame) ' ▸  35';position:absolute;left:1px;bottom:-14px;color:#b39865;font:7px/1.1 monospace;letter-spacing:1.1px;white-space:nowrap;pointer-events:none}
+.rotor-card img{filter:saturate(.97) contrast(1.025)}
+.film-gloss{position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,#fff0cf16,transparent 35%,#fff4de06 57%,#0002);box-shadow:inset 0 1px 2px #fff1d84d,inset 0 -3px 6px #0006}
+.rotor-disc::after{content:'';position:absolute;inset:-1px 8%;pointer-events:none;border-radius:50%/9%;background:linear-gradient(105deg,#0005,transparent 22%,#fff1ce0c 34%,transparent 49%,#ecd5a609 69%,#0006);filter:blur(3px)}
+.rotor-actions .rotor-play{width:49px;border-radius:18px;font-size:10px}
+.rotor-actions .rotor-play[aria-pressed=true]{color:#d5b678;border-color:#d5b67877}
+.scene-playing .scroll-progress{background:#b59664}
+@media(prefers-reduced-motion:reduce){.rotor-wheel{will-change:auto}}

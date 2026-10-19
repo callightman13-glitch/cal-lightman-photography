@@ -1,0 +1,46 @@
+/* Only the masked mountain pixels are shown; the distant plane is a clean sky. */
+.mountain-opener{height:340svh;background:#eee9df;scroll-margin-top:0!important}
+.mountain-sticky{min-height:0;height:100svh;isolation:isolate}
+.mountain-scene{position:absolute;inset:0;overflow:hidden;background:#e8d6b4;z-index:2;isolation:isolate}
+.mountain-warmth{position:absolute;inset:0;background:linear-gradient(#e5c990,#f3e6c9 62%,#cbcfb7)}
+.mountain-plane{position:absolute;background-size:100% 100%;background-repeat:no-repeat;transform-origin:52% 49%;will-change:transform,opacity}
+.mountain-distance{z-index:1;background-image:radial-gradient(ellipse at 38% 15%,#faf1d8 0%,transparent 62%),linear-gradient(#dec490,#f2e5c5 65%,#d1d6bf)}
+.mountain-title{position:absolute;z-index:2;top:20%;left:0;width:100%;text-align:center;color:#fcf7e5;transform-origin:52% 49%;will-change:transform,opacity}
+.mountain-title .eyebrow{font-size:10px;letter-spacing:.23em;font-weight:550;margin:0 0 22px;color:#504b3a}
+.mountain-title h1{font-family:var(--display);font-weight:900;font-stretch:85%;font-size:clamp(100px,17vw,270px);line-height:.82;letter-spacing:-.07em;margin:0;text-shadow:0 1px 20px #6a543508}
+.mountain-foreground{z-index:3;background-image:var(--mountain-image);-webkit-mask-image:var(--mountain-mask);mask-image:var(--mountain-mask);-webkit-mask-size:100% 100%;mask-size:100% 100%;pointer-events:none}
+.mountain-shade{position:absolute;inset:0;z-index:4;background:linear-gradient(transparent 70%,#071b1880);pointer-events:none}
+.mountain-bottom{position:absolute;z-index:5;bottom:35px;left:4vw;right:4vw;display:flex;align-items:end;justify-content:space-between;gap:20px;color:#fff9e9}
+.mountain-bottom>span{font-size:9px;line-height:1.8;letter-spacing:.07em}
+.mountain-bottom .scroll-cue{margin:0;font-size:9px;min-height:44px}
+.mountain-loading{position:absolute;z-index:6;bottom:100px;width:100%;text-align:center;color:#fff9e9;font-size:11px;letter-spacing:.1em}
+.mountain-opener[data-ready=true] .mountain-loading{display:none}
+.mountain-destination{position:absolute;inset:0;margin:0;z-index:1}
+.mountain-destination .story-sticky{position:relative;height:100%;min-height:0}
+.mountain-destination .story-photo,.mountain-destination .story-copy{will-change:transform,opacity}
+.mountain-anchor{position:absolute;top:240svh;left:0;width:1px;height:1px;scroll-margin-top:0!important}
+.mountain-opener~section{position:relative}
+.mountain-opener[data-fallback=true] .mountain-distance{mask:none;-webkit-mask:none}
+.mountain-opener[data-fallback=true] .mountain-foreground{display:none}
+.mountain-opener[data-fallback=true] .mountain-title{z-index:3}
+@media(max-width:650px){
+ .mountain-opener{height:300svh}.mountain-title{top:36%}
+ .mountain-title .eyebrow{font-size:7px;letter-spacing:.12em;margin-bottom:24px}
+ .mountain-title h1{font-size:25vw;line-height:.86;letter-spacing:-.065em}
+ .mountain-bottom{left:24px;right:24px;bottom:30px;align-items:center}
+ .mountain-bottom>span{font-size:7px;line-height:1.9}
+ .mountain-bottom .scroll-cue{font-size:7px;gap:10px}.mountain-chapter{display:none}.mountain-anchor{top:200svh}
+}
+@media(max-height:600px) and (min-width:651px){.mountain-title{top:24%}.mountain-title .eyebrow{margin-bottom:15px}.mountain-title h1{font-size:22vh}.mountain-bottom{bottom:20px}}
+@media(prefers-reduced-motion:reduce){
+ .mountain-opener{height:auto}.mountain-sticky{position:relative;height:auto;min-height:0;overflow:visible;display:flex;flex-direction:column}
+ .mountain-scene{position:relative;height:100svh;min-height:500px;order:0}
+ .mountain-plane{inset:0;background-size:cover;background-position:center;-webkit-mask-size:cover;mask-size:cover;-webkit-mask-position:center;mask-position:center;will-change:auto}
+ .mountain-destination{position:relative;inset:auto;order:1}.mountain-destination .story-sticky{height:auto;min-height:100svh}
+ .mountain-anchor{top:100svh}.mountain-loading{display:none}
+}
+.no-js .mountain-opener{height:auto}.no-js .mountain-sticky{height:auto;padding:0;display:flex;flex-direction:column;overflow:visible}
+.no-js .mountain-scene{position:relative;height:100svh;min-height:500px;order:0}
+.no-js .mountain-plane{inset:0;background-size:cover;background-position:center;-webkit-mask-size:cover;mask-size:cover;-webkit-mask-position:center;mask-position:center}
+.no-js .mountain-destination{position:relative;inset:auto;order:1}.no-js .mountain-destination .story-sticky{height:auto;min-height:100svh}
+.no-js .mountain-loading{display:none}.no-js .mountain-anchor{top:100svh}.no-js .mountain-bottom .scroll-cue{display:inline-flex}

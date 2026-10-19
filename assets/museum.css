@@ -1,0 +1,81 @@
+/* A small architectural set built from CSS planes; photographs keep their proportions. */
+.mountain-opener{height:870svh;background:#f0ede6}
+.mountain-destination.museum-destination{background:#efede6;overflow:hidden}
+.museum-viewport{position:absolute;inset:0;overflow:hidden;perspective:1500px;outline-offset:-5px}
+.museum-room{position:absolute;inset:0;isolation:isolate;transform-origin:50% 54%;transform-style:preserve-3d;will-change:transform}
+.museum-backwall{position:absolute;inset:0;background:radial-gradient(ellipse at 62% 38%,#fffefa 8%,#f2f0e9 65%,#e5e2da 100%)}
+.museum-backwall::after{content:'';position:absolute;inset:0;background:linear-gradient(119deg,transparent 26%,#fffefa60 26.1%,#fffefa80 42%,transparent 42.2%);pointer-events:none}
+.museum-ceiling{position:absolute;top:0;left:0;right:0;height:18%;background:linear-gradient(175deg,#dfdcd4,#f9f7f0);clip-path:polygon(0 0,100% 0,92% 72%,8% 72%);border-bottom:1px solid #d9d6cc;z-index:1}
+.museum-ceiling>span{position:absolute;top:-20%;left:37%;width:31%;height:81%;background:#fffef9;box-shadow:0 0 38px #fff9e3;transform:skewX(-28deg);border:7px solid #dfddd5}
+.museum-return{position:absolute;top:0;bottom:18%;width:9%;z-index:1;pointer-events:none}
+.museum-return-left{left:0;clip-path:polygon(0 0,100% 16%,100% 94%,0 100%);background:linear-gradient(90deg,#d9d6ce,#eeece4)}
+.museum-return-right{right:0;clip-path:polygon(0 16%,100% 0,100% 100%,0 94%);background:linear-gradient(90deg,#e9e6de,#d9d6ce)}
+.museum-floor{position:absolute;left:0;right:0;top:77%;height:30%;background:linear-gradient(#d1c5ae55,#ccbda2),repeating-linear-gradient(91deg,#c8b89c 0px,#d2c3a9 2px,#ddd0b7 3px,#d2c2a7 100px);transform-origin:50% 0;transform:perspective(600px) rotateX(30deg) scaleX(1.2);border-top:5px solid #d0c7b9;box-shadow:inset 0 15px 32px #7c705524;z-index:1}
+.museum-floor::after{content:'';position:absolute;inset:0;background:linear-gradient(118deg,transparent 20%,#fff6dd65 20.2%,#fff6dd55 48%,transparent 48.2%)}
+.museum-heading{position:absolute;z-index:3;left:12%;top:clamp(112px,16vh,170px);pointer-events:none}
+.museum-heading .eyebrow{font-size:9px;letter-spacing:.13em;color:#6f6b60;margin:0 0 15px}
+.museum-heading h2{font-weight:500;font-size:clamp(35px,3.2vw,50px);letter-spacing:-.065em;line-height:1.1;margin:0;color:#282b25;display:flex;align-items:baseline;gap:20px}
+.museum-heading h2 span{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.035em}
+.museum-heading>p:last-child{font-size:11px;color:#797468;margin:14px 0 0;line-height:1.8}
+.museum-track{--bay:clamp(600px,64vw,1000px);position:absolute;top:29%;left:0;width:max-content;display:flex;align-items:center;padding:0 calc((100vw - var(--bay))/2);z-index:2;will-change:transform;transform-style:preserve-3d}
+.museum-bay{position:relative;flex:0 0 var(--bay);width:var(--bay);margin:0;display:flex;flex-direction:column;align-items:center;transition:opacity .25s}
+.museum-frame{--mat:clamp(14px,2vw,29px);--photo-height:clamp(160px,32vh,370px);display:block;width:calc(var(--photo-height)*var(--photo-ratio) + 2*var(--mat) + 12px);padding:6px;background:#3b3b33;box-shadow:1px 2px 0 #191b16,4px 7px 9px #4e473b25,15px 22px 25px #5c52471b;position:relative;max-width:78%;outline-offset:8px;transform:translateZ(1px);flex-shrink:0}
+.museum-frame::after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 0 1px #f9f6e527;pointer-events:none}
+.museum-mat{display:block;padding:var(--mat);background:#fbfaf5;box-shadow:inset 0 0 2px #fff}
+.museum-frame img.museum-image{height:auto;width:100%;max-width:100%;aspect-ratio:var(--photo-ratio);object-fit:contain;display:block;box-shadow:0 0 0 1px #00000010}
+.museum-bay figcaption{margin-top:24px;display:flex;gap:13px;align-items:start;min-width:160px;max-width:85%;color:#55554b;text-align:left}
+.museum-plate-number{font-family:var(--display);font-size:15px;line-height:1.1;color:#7c7a6f;border-top:1px solid #89877b;padding-top:4px}
+.museum-bay figcaption strong{display:block;font-size:12px;font-weight:500;line-height:1.5;letter-spacing:.02em}
+.museum-bay figcaption small{display:block;font-size:8px;line-height:1.5;letter-spacing:.06em;color:#8b887b;margin-top:4px}
+.museum-light{position:absolute;width:60%;height:160px;top:-120px;left:20%;background:radial-gradient(ellipse at 50% 0,#fffcdf40,transparent 70%);pointer-events:none}
+.museum-bench{position:absolute;left:12%;bottom:13%;width:15%;height:12px;background:linear-gradient(#cab18c,#a58c67);transform:skewX(-18deg);box-shadow:9px 15px 16px #5c51443b;z-index:3}
+.museum-bench::before,.museum-bench::after{content:'';position:absolute;top:10px;width:6px;height:25px;background:#867454;transform:skewX(18deg)}
+.museum-bench::before{left:15%}.museum-bench::after{right:15%}
+.museum-ui{position:absolute;left:4vw;right:4vw;bottom:28px;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:20px;color:#45463d}
+.museum-position{display:flex;align-items:baseline;gap:10px;font-size:10px;min-width:180px}
+.museum-current-number{font-family:var(--display);font-size:28px;font-weight:650;letter-spacing:-.04em}
+.museum-position-divider{color:#827d70;font-size:10px}.museum-current-title{font-size:10px;margin-left:10px}
+.museum-instructions{min-width:160px;font-size:9px;line-height:1.8;text-align:center;color:#756e60}
+.museum-tour-progress{height:2px;background:#9a8f7933;width:130px;margin:8px auto 0;overflow:hidden}
+.museum-tour-progress i{display:block;width:100%;height:100%;background:#5f6655;transform:scaleX(0);transform-origin:left;will-change:transform}
+.museum-actions{display:flex;align-items:center;gap:8px}
+.museum-actions button{width:40px;height:40px;border:1px solid #8c806344;background:#f3eee266;border-radius:50%;font-size:19px;cursor:pointer;display:grid;place-items:center;color:inherit}
+.museum-actions button:disabled{opacity:.28;cursor:default}
+.museum-actions button:hover:not(:disabled){background:#fff9e8}
+.museum-actions a{font-size:10px;padding:12px 0 12px 12px;display:flex;gap:15px;white-space:nowrap}
+.museum-skip{position:absolute;left:24px;bottom:85px;z-index:8;opacity:0;pointer-events:none;background:#fff;padding:10px;font-size:12px}
+.museum-skip:focus-visible{opacity:1;pointer-events:auto}
+@media(max-width:999px) and (min-width:651px){.museum-heading{left:12%;top:120px}.museum-track{--bay:78vw;top:34%}.museum-frame{--photo-height:28vh}.museum-heading h2{font-size:39px}}
+@media(max-width:650px){
+ .mountain-opener{height:850svh}.museum-heading{top:120px;left:24px;right:24px}.museum-heading .eyebrow{font-size:7px;letter-spacing:.07em;margin-bottom:17px}
+ .museum-heading h2{font-size:38px;gap:16px}.museum-heading h2 span{font-size:10px}.museum-heading>p:last-child{font-size:10px;margin-top:16px}
+ .museum-ceiling{height:14%;clip-path:polygon(0 0,100% 0,90% 70%,10% 70%)}.museum-ceiling>span{left:38%;width:40%}
+ .museum-return{width:4%;bottom:22%}.museum-return-left{clip-path:polygon(0 0,100% 13%,100% 94%,0 100%)}.museum-return-right{clip-path:polygon(0 13%,100% 0,100% 100%,0 94%)}
+ .museum-track{--bay:100vw;top:36%;padding:0}
+ .museum-frame{width:calc(100vw - 58px);max-width:86%;padding:4px}.museum-mat{padding:13px}.museum-frame img.museum-image{width:100%;height:auto}
+ .museum-bay figcaption{margin-top:25px;gap:12px;min-width:145px}.museum-bay figcaption strong{font-size:11px}.museum-bay figcaption small{font-size:7px}
+ .museum-floor{top:76%;height:32%;transform:perspective(500px) rotateX(35deg) scaleX(1.3)}.museum-bench{left:10%;width:29%;bottom:18%;height:8px}.museum-bench::before,.museum-bench::after{height:20px;top:7px;width:5px}
+ .museum-ui{left:24px;right:24px;bottom:28px;display:grid;grid-template-columns:1fr auto;gap:18px 10px}.museum-position{min-width:0;gap:7px}.museum-current-number{font-size:26px}.museum-current-title{font-size:9px;margin-left:4px;max-width:9em}.museum-position-divider{font-size:9px}
+ .museum-instructions{grid-column:1/-1;grid-row:2;font-size:8px;text-align:left;display:flex;align-items:center;justify-content:space-between}.museum-tour-progress{width:85px;margin:0}
+ .museum-actions button{width:34px;height:34px;font-size:17px}.museum-actions{gap:6px}.museum-actions a{font-size:8px;padding-left:6px;gap:6px}
+}
+@media(max-height:600px) and (min-width:651px){
+ .museum-heading{top:100px;left:10%}.museum-heading .eyebrow{font-size:7px;margin-bottom:8px}.museum-heading h2{font-size:27px}.museum-heading h2 span{font-size:9px}.museum-heading>p:last-child{display:none}
+ .museum-track{top:42%;--bay:62vw}.museum-mat{padding:10px}.museum-frame{--photo-height:max(80px,20vh);--mat:10px;width:calc(var(--photo-height)*var(--photo-ratio) + 26px);padding:3px}.museum-bay figcaption{margin-top:12px}.museum-bay figcaption strong{font-size:10px}.museum-bay figcaption small{font-size:6px}.museum-plate-number{font-size:11px}
+ .museum-floor{top:80%}.museum-ui{bottom:12px}.museum-current-number{font-size:21px}.museum-instructions{font-size:7px}.museum-actions button{width:30px;height:30px;font-size:15px}.museum-bench{display:none}
+}
+/* Readable vertical exhibition when animation or JavaScript is unavailable. */
+@media(prefers-reduced-motion:reduce){
+ .mountain-destination.museum-destination{position:relative;height:auto;overflow:visible}
+ .museum-viewport{position:relative;overflow:visible;perspective:none}.museum-room{position:relative;transform:none!important}
+ .museum-track{position:relative;top:auto;left:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:70px 30px;width:auto;padding:250px 6vw 80px;transform:none!important}
+ .museum-bay{width:auto}.museum-frame img.museum-image{width:100%;height:auto;max-height:none}.museum-frame{max-width:100%}.museum-heading{top:120px;left:6vw}
+ .museum-floor,.museum-ceiling,.museum-return,.museum-bench,.museum-ui,.museum-light{display:none}.museum-skip{display:none}
+}
+@media(prefers-reduced-motion:reduce) and (max-width:650px){.museum-track{grid-template-columns:1fr;padding:240px 24px 70px;gap:55px}.museum-heading{left:24px}.museum-frame{max-width:100%}}
+.no-js .mountain-destination.museum-destination{position:relative;height:auto;overflow:visible}
+.no-js .museum-viewport{position:relative;overflow:visible;perspective:none}.no-js .museum-room{position:relative;transform:none}
+.no-js .museum-track{position:relative;top:auto;left:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:70px 30px;width:auto;padding:250px 6vw 80px;transform:none}
+.no-js .museum-bay{width:auto}.no-js .museum-frame img.museum-image{width:100%;height:auto;max-height:none}.no-js .museum-frame{max-width:100%}.no-js .museum-heading{top:120px;left:6vw}
+.no-js .museum-floor,.no-js .museum-ceiling,.no-js .museum-return,.no-js .museum-bench,.no-js .museum-ui,.no-js .museum-light,.no-js .museum-skip{display:none}
+@media(max-width:650px){.no-js .museum-track{grid-template-columns:1fr;padding:240px 24px 70px;gap:55px}.no-js .museum-heading{left:24px}}
