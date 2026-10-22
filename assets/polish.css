@@ -1,0 +1,48 @@
+/* Shared editorial finish; scene geometry remains in the scene controllers. */
+.scroll-header{height:64px;border-radius:18px;box-shadow:0 5px 24px #252b1510}
+.scroll-header .brand strong{font-size:27px}
+.scroll-progress,.scene-playing .scroll-progress{background:#9caa85;height:2px}
+.mountain-title{top:17%;color:#fffdf2}
+.mountain-title h1{font-size:clamp(100px,15.5vw,240px);text-shadow:0 2px 20px #5b482b18}
+.scroll-section-heading h2{font-size:clamp(38px,5vw,68px);letter-spacing:-.045em;line-height:1.15}
+.scroll-section-heading>.eyebrow{color:#66705b;letter-spacing:.15em}
+.scroll-about .about-layout{grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:clamp(36px,6vw,88px);align-items:start}
+.scroll-about .about-photo{position:sticky;top:110px;margin:0}
+.scroll-about .about-photo img{height:auto;aspect-ratio:auto;border-radius:3px}
+.about-photo figcaption{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:#66695f;margin-top:15px}
+.about-photo figcaption span{white-space:nowrap}
+.scroll-about .person-name{font-size:30px;line-height:1.45;font-weight:600;margin:12px 0 20px}
+.person-name span{display:block;font-family:Georgia,serif;font-style:italic;font-size:25px;font-weight:400;color:#67735e;margin-top:4px}
+.scroll-about .prose{font-size:16px;line-height:1.95}
+.scroll-about .prose .eyebrow{font-size:10px}
+.scroll-about .info-line{padding-bottom:22px;border-bottom:1px solid #d5d8cd;font-size:13px;color:#626a59}
+.scroll-about .about-section{margin-top:30px}.scroll-about .about-section h3{font-size:24px;font-weight:600}
+.personal-aside{color:#66695f;font-size:14px}
+.project-intro{font-size:clamp(20px,2.4vw,30px);line-height:1.75;letter-spacing:-.02em;max-width:30em;margin:0 0 36px}
+.project-overview{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:25px 0;border-top:1px solid #cdd0c5;border-bottom:1px solid #cdd0c5;color:#62695c;font-size:12px}
+.project-overview strong{display:block;font:500 28px/1.4 var(--display);color:#374632;margin-bottom:5px}
+.editorial-chapter{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:60px;align-items:center;padding:80px 0;border-bottom:1px solid #d8dacf}
+.chapter-copy h3{font-size:clamp(25px,3vw,40px);line-height:1.45;font-weight:600;letter-spacing:-.04em;margin:18px 0 24px}
+.chapter-copy>p:not(.eyebrow){font-size:16px;line-height:1.95;color:#50574b;max-width:36em}
+.chapter-copy .eyebrow{font-size:11px;color:#68785b;letter-spacing:.1em}
+.editorial-figure{margin:0;min-width:0}.editorial-figure img{display:block;width:100%;height:auto;border-radius:4px}
+.editorial-figure figcaption{margin-top:14px;font-size:12px;line-height:1.8;color:#68705f}
+.photo-pair{display:grid;grid-template-columns:1fr 1fr;align-items:start;gap:16px}.photo-pair img:nth-child(2){margin-top:60px}.photo-pair figcaption{grid-column:1/-1}
+.chapter-wide{grid-template-columns:1fr 1fr;gap:32px}.chapter-wide .chapter-copy{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;column-gap:48px}.chapter-wide .eyebrow{grid-column:1/-1}.chapter-wide h3{margin-top:0}.chapter-wide .chapter-copy>p:last-child{margin-top:8px}
+.chapter-collaboration{grid-template-columns:1.3fr .7fr;gap:80px}.phone-evidence{max-width:280px;justify-self:center;padding:12px;border:1px solid #d4d7ca;border-radius:24px;background:#e9ebe2}.phone-evidence img{border-radius:14px}.phone-evidence figcaption{padding:0 6px 6px}
+.role-notes{margin-top:30px;border-top:1px solid #cdd0c5}.role-notes>div{display:grid;grid-template-columns:70px 1fr;gap:15px;padding:15px 0;border-bottom:1px solid #cdd0c5;font-size:13px;line-height:1.8}.role-notes span{color:#566747}.role-notes p{margin:0;color:#646b5c}
+.project-details{margin-top:32px;border-bottom:1px solid #cdd0c5}.project-details summary{display:flex;justify-content:space-between;align-items:center;min-height:64px;cursor:pointer;font-size:16px;list-style:none}.project-details summary::-webkit-details-marker{display:none}.project-details summary span{font-size:25px;color:#66705b}.project-details[open] summary span{transform:rotate(45deg)}.project-details summary:focus-visible{outline:2px solid #68785b;outline-offset:5px}.detail-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:12px 0 30px}.detail-columns h3{font-size:16px;font-weight:600}.detail-columns p{font-size:14px;line-height:1.9;color:#62695c}
+.film-current-caption{font-size:13px;color:#b7b8aa}.film-current-title{font-size:17px}.rotor-actions button{min-width:44px;min-height:44px}.film-edge-label{display:none}
+@media(max-width:900px){.editorial-chapter{gap:30px}.chapter-collaboration{gap:35px}.scroll-about .about-layout{gap:35px}}
+@media(max-width:650px){
+ .scroll-header{height:60px}.scroll-header .brand strong{font-size:24px}
+ .mountain-title{top:30%}.mountain-title h1{font-size:24vw}.mountain-title .eyebrow{font-size:9px;letter-spacing:.1em}.mountain-bottom>span,.mountain-bottom .scroll-cue{font-size:9px}
+ .scroll-section-heading h2{font-size:37px}.scroll-container{padding-top:64px;padding-bottom:64px}
+ .scroll-about .about-layout{grid-template-columns:1fr;gap:32px}.scroll-about .about-photo{position:relative;top:auto;max-width:100%}.scroll-about .about-photo img{max-height:65svh;object-fit:contain;background:#e9ebe2}.scroll-about .prose{font-size:15px;line-height:1.9}.scroll-about .person-name{font-size:27px}
+ .project-intro{font-size:21px}.project-overview{gap:12px;font-size:11px}.project-overview strong{font-size:22px}
+ .editorial-chapter,.chapter-collaboration{grid-template-columns:1fr;gap:28px;padding:45px 0}.chapter-copy h3{font-size:29px;margin:15px 0 20px}.chapter-copy>p:not(.eyebrow){font-size:15px;line-height:1.9}.chapter-copy .eyebrow{font-size:10px}
+ .chapter-wide .chapter-copy{display:block}.chapter-wide .editorial-figure{grid-column:1}.editorial-figure figcaption{font-size:12px}.photo-pair{gap:12px}.photo-pair img:nth-child(2){margin-top:36px}.phone-evidence{max-width:260px}.detail-columns{grid-template-columns:1fr;gap:10px}
+ .rotor-heading{top:100px}.rotor-heading>p{font-size:9px;margin-bottom:16px}.rotor-heading h2{font-size:42px;line-height:1.06}.rotor-heading h2 em{margin-top:4px}.film-readout{top:74%;gap:12px;padding-top:14px}.film-current-title{font-size:16px}.film-current-caption{font-size:12px;line-height:1.7}.film-frame-number{min-width:60px;font-size:28px}.rotor-footer{bottom:28px}.film-signature{font-size:17px}.film-signature small{font-size:10px;letter-spacing:.03em}.rotor-actions{gap:6px}.rotor-actions .rotor-play{width:50px;font-size:12px}
+}
+@media(max-width:350px){.rotor-heading h2{font-size:37px}.rotor-heading>p{font-size:8px}.film-signature{display:none}.rotor-footer{justify-content:flex-end}.film-current-caption{font-size:12px}.project-overview{grid-template-columns:1fr;gap:14px}.project-overview strong{display:inline;margin-right:12px}.scroll-section-heading h2{font-size:32px}}
+@media(max-height:600px) and (min-width:651px){.mountain-title{top:23%}.mountain-title h1{font-size:22vh}.rotor-actions button{min-height:36px;min-width:36px}.film-current-title{font-size:13px}}
